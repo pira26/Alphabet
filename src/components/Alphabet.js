@@ -154,8 +154,7 @@ export default class Alphabet extends Component {
 						<audio src={this.state.alphabets[this.state.currentPosition].letterSound}
 							   data-key="letter sound" />
 					</div>
-					position: {this.state.currentPosition} <br/>
-					tick: {this.state.currentTick}
+		
 					<div className="buttons">
 						<a className="button prev"
 						   onClick={this.prev}>Previous</a>
