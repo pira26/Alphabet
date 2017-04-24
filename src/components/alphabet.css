@@ -1,0 +1,290 @@
+.game  {
+	margin: 10px;
+	padding: 20px;
+	width: auto;
+	min-height: 60%;
+	position: relative;
+	color: #ddd;
+	background-color: #ec1561;
+}
+
+.fields {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	flex: 1;
+	padding: 12px;
+}
+
+.field-block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 240px;
+	padding: 1%;
+	border-radius: 5px;
+	background-color: #f9bad0;
+	font-size: 12rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+.field-block span {
+	font-size: 3rem;
+	padding-left: 10px;
+}
+
+.field-block .word {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-style: 4rem;
+	padding-left: 10px;	
+}
+
+.field-block .placeholder-span {
+	font-size: 1rem;
+}
+
+.left-field,
+.right-field {
+	height: 100%;
+	width: 45%;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.letter-image {
+	width: 200px;
+	height: 200px;
+}
+
+.button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	text-align: center;
+	height: 48px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-right: 10px;
+	margin-left: 10px; 
+	border-radius: 5px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,.05), 0 2px 12px 0 rgba(0,0,0,.1);
+	background-color: #2fcaaa;
+	transition: box-shadow 200ms ease-out;
+	color: #fff;
+	font-weight: 500;
+	cursor: pointer; 
+}
+
+.sound {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.prev {
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #47b04b;
+}
+
+.next {
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #00a7f7;
+}
+
+.default {
+  color: #333;
+  background-color: #eef1f3;
+}
+
+.hide {
+  display: none !important;
+}
+
+.random-label {
+  margin-left: 20px;
+  font-size: 2rem;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  margin-bottom: -7px;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+footer {
+  font-size: 2rem;
+}
+
+.heart {
+  position: relative;
+  width: 50px;
+  top: 5px;
+  fill: red;
+  animation: pulse 1s ease infinite, 
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+  .game {
+    margin: 5px;
+    padding: 5px;
+  }
+  .random-label {
+    font-size: 1.4rem;
+  }
+  .switch {
+    width: 30px;
+    height: 17px;
+    margin-bottom: -5px;
+  }
+  .slider:before {
+    height: 13px;
+    width: 13px;
+    bottom: 2px;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+  }
+
+  .slider.round {
+    border-radius: 17px;
+  }
+  .field-block {
+    min-height: 100px;
+    padding: 0;
+    font-size: 3rem;
+  }
+  .App-header {
+    height: 40px;
+  }
+  .App-header h1 {
+    font-size: 1rem;
+  }
+  .button {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 0.9rem;
+  }
+  .prev, .next, .sound {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .letter-image {
+    width: 50px;
+    height: 50px;
+  }
+  .field-block .word {
+    font-size: 1.5rem;
+    padding-left: 5px;
+  }
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+}
